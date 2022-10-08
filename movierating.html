@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=
+        , initial-scale=1.0"
+		/>
+		<title>Rating Movies</title>
+		<link rel="stylesheet" href="movierating.css" />
+	</head>
+	<body>
+		<form>
+			<input
+				type="text"
+				name="movie-name"
+				id="movie-name"
+				placeholder="Enter your movie title"
+			/>
+			<input
+				type="range"
+				id="movie-rating"
+				name="movie-rating"
+				value="5"
+				min="0"
+				max="10"
+				oninput="this.nextElementSibling.nextElementSibling.value = this.value"
+			/>
+			<label for="movie-rating">(Movie Rating)</label>
+			<output>5</output>
+			<br />
+			<br />
+			<button type="submit" id="submit">Submit me!</button>
+		</form>
+		<br />
+		<table>
+			<tbody></tbody>
+		</table>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script src="movierating.js"></script>
+</html>
